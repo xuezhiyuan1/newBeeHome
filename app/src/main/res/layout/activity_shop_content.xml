@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:id="@+id/back_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:background="@drawable/back"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textColor="#ff9500"
+                android:textSize="50dp"/>
+        </LinearLayout>
+
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentRight="true">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="此页面将在"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="25dp" />
+
+
+    <TextView
+        android:id="@+id/value_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff9500"
+        android:text="59s"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="后关闭"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="25dp" />
+      </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+    <ImageView
+        android:id="@+id/image_info"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/shop_content_info"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:lines="2"
+        android:text="52度国窖1573酒 浓香型高
+   度白酒 500ml"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.5"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/decoration_pattern"
+        android:scaleType="center"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/shop_Name2"
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="#5353"
+        android:gravity="center"
+        android:text="小名"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/original_price"
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="#5353"
+        android:gravity="center"
+        android:text="市场价："
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/current_price1"
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="#5353"
+        android:gravity="center"
+        android:text="折扣价："
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"/>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#5353"
+        android:layout_height="1dp" />
+
+
+
+    <TextView
+        android:id="@+id/current_price2"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="#ffb006"
+        android:gravity="center"
+        android:text="需支付："
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"/>
+
+    <ImageView
+        android:id="@+id/image_recode"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_marginLeft="125dp"
+        android:layout_marginRight="125dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center" />
+</LinearLayout>

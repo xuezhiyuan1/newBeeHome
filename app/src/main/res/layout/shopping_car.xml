@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    android:background="#f2f0f0"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/back_Text"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="#ff9500"
+                android:textSize="50dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/clearShopCarBtn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/del_btn"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/shopping_del_icon1"
+            android:paddingLeft="20dp"
+            android:text="删除"
+            android:textColor="#535353"/>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/list_shopCar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="72px"
+                    android:layout_marginTop="48px"
+                    android:text="商品数量："/>
+
+                <TextView
+                    android:layout_marginLeft="72px"
+                    android:layout_marginTop="34px"
+                    android:text="应付金额："
+                    android:textSize="25dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="结算"
+                android:layout_marginTop="50px"
+                android:layout_marginRight="30px"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="30dp"
+                android:background="@drawable/settlement"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

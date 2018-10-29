@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="50dp"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/image_info_finish"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/shop_content_info_finish"
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:lines="2"
+        android:text="52度国窖1573酒 浓香型高
+   度白酒 500ml"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.5"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/decoration_pattern"
+        android:scaleType="center"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/shop_Name_finish"
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="#5353"
+        android:gravity="center"
+        android:text="小名"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/original_price_finish"
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="#5353"
+        android:gravity="center"
+        android:text="市场价："
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/current_price_finish"
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="#5353"
+        android:gravity="center"
+        android:text="折扣价："
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"/>
+
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shipment_bg"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:text="支付成功，正在出货"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:src="@drawable/shipment_take"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

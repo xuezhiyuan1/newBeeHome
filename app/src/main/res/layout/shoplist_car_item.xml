@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="270px"
+    android:layout_marginLeft="40px"
+    android:layout_marginRight="40px"
+    android:background="@drawable/shopcar_item">
+
+    <ImageView
+        android:id="@+id/iamgeView"
+        android:layout_marginTop="45px"
+        android:layout_width="170px"
+        android:layout_height="170px"
+        android:background="@drawable/jiu"
+        android:layout_marginLeft="75px"/>
+
+
+    <RelativeLayout
+        android:id="@+id/writeNumber"
+        android:layout_toRightOf="@+id/iamgeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="55px"
+        android:layout_marginTop="45px">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50px"
+            android:textSize="18px"
+            android:layout_marginTop="45px"
+            android:text="智力原装进口红魔鬼卡本尼苏维翁红葡萄酒"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50px"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:text="  -"
+                android:background="@drawable/shoppingcar_image_btn"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="2"
+                android:layout_marginLeft="28px"
+                android:layout_marginRight="28px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="  +"
+                android:layout_gravity="center"
+                android:background="@drawable/shoppingcar_image_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="库存7件"
+                android:layout_marginLeft="72px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="55px"
+        android:layout_marginTop="45px"
+        android:layout_toRightOf="@id/writeNumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:background="@drawable/del_btn"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/shopping_del_icon1"
+            android:paddingLeft="20dp"
+            android:text="删除"
+            android:textColor="#535353"/>
+
+
+        <TextView
+            android:textColor="#fcffb401"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥34.59"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

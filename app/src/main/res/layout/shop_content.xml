@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    android:id="@+id/tagImages"
+    android:orientation="vertical"
+    android:background="@drawable/shape_corner_down">
+
+
+        <ImageView
+            android:id="@+id/image_info"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bee" />
+
+        <TextView
+            android:id="@+id/shop_content_info"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:lines="2"
+            android:text="52度国窖1573酒 浓香型高
+   度白酒 500ml"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18dp"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#5353"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/original_price"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="#5353"
+            android:gravity="center"
+            android:text="￥899.00"
+            android:textAppearance="?android:attr/textAppearanceLargeInverse"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/current_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffb006"
+                android:gravity="center"
+                android:text="￥0.01"
+                android:layout_gravity="center_horizontal"
+                android:textSize="25dp"/>
+<!--
+
+            <ImageView
+                android:id="@+id/shopping_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:background="@drawable/shoppingcar_image_btn"
+                android:src="@drawable/listshop_shopping_icon2"/>
+-->
+
+        </LinearLayout>
+
+
+</LinearLayout>
+
+
