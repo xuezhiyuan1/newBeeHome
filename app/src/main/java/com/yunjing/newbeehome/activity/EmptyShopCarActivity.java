@@ -144,5 +144,4 @@ public class EmptyShopCarActivity extends BaseActivity implements View.OnClickLi
 
 
 
-
 }

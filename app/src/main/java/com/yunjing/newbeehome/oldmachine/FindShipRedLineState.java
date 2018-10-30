@@ -14,6 +14,7 @@ import android_serialport_api.SerialUtilOld;
  */
 
 public class FindShipRedLineState {
+
     public static SerialUtilOld serialUtilOld;
 
     public static String findMachineRedLineOrder(String port,int open,int close) throws InterruptedException {

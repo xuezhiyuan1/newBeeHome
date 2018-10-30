@@ -32,6 +32,7 @@ public class ShipmentUtil {
      * @return
      */
     public static void sendShipMentOrder(String port,int xAxis,int yAxis,int zAxis,int deliverySpeed) throws InterruptedException, IOException {
+
         BufferedWriter out;
         SimpleDateFormat formatter = new   SimpleDateFormat   ("yyyy年MM月dd日   HH:mm:ss");
         java.util.Date curDate = new java.util.Date(System.currentTimeMillis());

@@ -23,7 +23,8 @@ public class OldMachineTakeShop {
 
     public static String takeShop(){
         try {
-            String port = prop.getProperty("1");
+            String machineId = prop.getProperty("QUEUE_NAME");
+            String port = prop.getProperty(machineId);
             String machineOpenDoor = OpenDoorOrder.findMachineOrder(port, 12, 14, 1000);
             if(machineOpenDoor.equals("00")){
                 //门锁已开  开始查询

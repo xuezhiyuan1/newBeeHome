@@ -3,6 +3,7 @@ package com.yunjing.newbeehome.oldmachine.logic;
 import android.os.Environment;
 import android.util.Log;
 
+import com.yunjing.newbeehome.base.Keys;
 import com.yunjing.newbeehome.model.util.PropertiesUtils;
 import com.yunjing.newbeehome.protocol.ParamsSettingUtil;
 
@@ -19,8 +20,11 @@ import android_serialport_api.SerialUtilOld;
 
 public class ResetMachine {
     public static SerialUtilOld serialUtilOld;
+    static Properties prop = PropertiesUtils.propertiesUtils().properties(Keys.FILE_URI_PATH + Keys.FILE_NAME);
 
-    public static void resetMachine(String port) throws InterruptedException {
+    public static void resetMachine() throws InterruptedException {
+        String machineId = prop.getProperty("QUEUE_NAME");
+        String port = prop.getProperty(machineId);
         //初始化串口
         serialUtilOld = new SerialUtilOld(port, 19200, 0);
         //发送开门指令

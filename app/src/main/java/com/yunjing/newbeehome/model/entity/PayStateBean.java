@@ -7,6 +7,7 @@ package com.yunjing.newbeehome.model.entity;
 
 public class PayStateBean {
 
+
     /**
      * meta : {"success":true,"message":"ok"}
      * data : 1

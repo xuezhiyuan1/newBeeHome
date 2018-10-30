@@ -10,6 +10,7 @@ import java.util.List;
 
 public class CheckShopCarBean implements Serializable {
 
+
     /**
      * meta : {"success":true,"message":"ok"}
      * data : {"countAll":4,"equipmentOperatorId":0,"carts":[{"cartId":3,"machineId":1,"shopId":1,"productId":1,"machineOrderId":null,"customerId":null,"quantity":2,"status":"0","createDate":"2018-10-22T02:08:15.000+0000","rank":null,"remarks":null,"delFlag":"0","productFullName":null,"inventoryNum":91},{"cartId":4,"machineId":1,"shopId":1,"productId":2,"machineOrderId":null,"customerId":null,"quantity":2,"status":"0","createDate":"2018-10-22T02:10:17.000+0000","rank":null,"remarks":null,"delFlag":"0","productFullName":null,"inventoryNum":18}],"productIds":[1,1,2,2],"feeAll":12001,"quantityAll":1001}

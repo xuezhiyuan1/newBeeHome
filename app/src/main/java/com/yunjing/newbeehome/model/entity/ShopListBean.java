@@ -12,7 +12,6 @@ import java.util.List;
 
 public class ShopListBean implements Serializable{
 
-
     /**
      * meta : {"success":true,"message":"ok"}
      * data : [{"advertisementId":25,"advertisementStrategyId":1,"advertisementName":"首页广告","advertisementType":"0","resourceId":"3cbb49e327b64df48e8a127f65a5213d","rank":null,"remarks":null,"delFlag":"0"},{"advertisementId":26,"advertisementStrategyId":1,"advertisementName":"广告名称","advertisementType":"0","resourceId":"3dc91b3f6d724102be5e2da3e02129ae","rank":null,"remarks":null,"delFlag":"0"},{"advertisementId":27,"advertisementStrategyId":1,"advertisementName":null,"advertisementType":null,"resourceId":null,"rank":null,"remarks":null,"delFlag":"0"},{"advertisementId":28,"advertisementStrategyId":1,"advertisementName":null,"advertisementType":null,"resourceId":null,"rank":null,"remarks":null,"delFlag":"0"},{"advertisementId":29,"advertisementStrategyId":1,"advertisementName":"列表页广告","advertisementType":"3","resourceId":"3cbb49e327b64df48e8a127f65a5213d","rank":null,"remarks":null,"delFlag":"0"}]

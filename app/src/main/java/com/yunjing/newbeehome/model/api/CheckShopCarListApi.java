@@ -13,6 +13,7 @@ import retrofit2.http.Query;
  */
 
 public interface CheckShopCarListApi {
+
     @GET(Urls.SHOPCARLISTCHECK)
     Call<CheckShopCarBean> getDatas(@Query("machineId") int machineId);
 }

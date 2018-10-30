@@ -9,6 +9,7 @@ import java.util.List;
 
 
 public abstract  class CommonAdapter<T> extends BaseAdapter {
+
     private List<T> datas;
     private Context context;
     private int layoutId;

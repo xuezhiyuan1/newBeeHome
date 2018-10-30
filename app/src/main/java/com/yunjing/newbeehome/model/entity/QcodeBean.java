@@ -7,6 +7,7 @@ package com.yunjing.newbeehome.model.entity;
 
 public class QcodeBean {
 
+
     /**
      * meta : {"success":true,"message":"ok"}
      * data : {"machineOrder":{"machineOrderId":32,"shopId":1,"equipmentOperatorId":0,"customerId":null,"addressId":null,"outTradeNo":"8509ed1d2e914750a6fc57684364bcbd","totalFee":1000,"currentTotalPrice":2000,"orderStatus":"1","createDate":"2018-10-19T07:05:20.274+0000","orderType":null,"paymentType":null,"rank":null,"remarks":null,"delFlag":null,"link":"二维码链接"}}

@@ -246,7 +246,6 @@ public class ShopContentActivity extends BaseActivity implements View.OnClickLis
 
 
 
-
     //跳转Activity
     public void inAct(Class tClass,Bundle bundle) {
         Intent intent = new Intent(context, tClass);

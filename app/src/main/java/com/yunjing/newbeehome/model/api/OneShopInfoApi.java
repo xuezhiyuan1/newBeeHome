@@ -14,6 +14,7 @@ import retrofit2.http.Query;
  */
 
 public interface OneShopInfoApi {
+
     @GET(Urls.ONSHOPINFO)
     Call<ShopInfoBean> getShopInfo(@Query("productId") int productId, @Query("machineId") int machineId);
 }

@@ -24,7 +24,8 @@ public class OldMachineShipMent {
 
     public static String shipment(int x,int y,int z,int deliverySpeed){
         try {
-            String port = prop.getProperty("1");
+            String machineId = prop.getProperty("QUEUE_NAME");
+            String port = prop.getProperty(machineId);
             //出货指令
             ShipmentUtil.sendShipMentOrder(port, x, y, z, deliverySpeed);
             //运动过程查询设备状态指令

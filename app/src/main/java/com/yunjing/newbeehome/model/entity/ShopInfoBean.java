@@ -9,6 +9,7 @@ import java.util.List;
 
 public class ShopInfoBean {
 
+
     /**
      * meta : {"success":true,"message":"ok"}
      * data : {"productId":1,"equipmentOperatorId":0,"barCode":"115588990","skuCode":"1100","productFullName":"商品全称1","productName":"商品名称","brand":"商品品牌","attribute":"商品属性","specifications":"规格型号","manufacturer":"生产厂家","expirationDate":30,"productStoreType":null,"auditStatus":"1","rank":null,"remarks":null,"delFlag":"0","categoryProducts":null,"categoryProductMaps":null,"productImageMaps":[{"productImageMapId":7,"productId":1,"imageId":"3cbb49e327b64df48e8a127f65a5213d","imageType":"0","rank":null,"remarks":null,"delFlag":"0"},{"productImageMapId":8,"productId":1,"imageId":"3cbb49e327b64df48e8a127f65a5213d","imageType":"1","rank":null,"remarks":null,"delFlag":"0"}],"imageId":null,"inventoryNum":null,"originalPrice":1000,"normalPrice":100,"coldStoragePrice":null}

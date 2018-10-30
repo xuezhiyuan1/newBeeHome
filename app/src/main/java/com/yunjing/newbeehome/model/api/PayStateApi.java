@@ -13,6 +13,7 @@ import retrofit2.http.Query;
  */
 
 public interface PayStateApi {
+
     @GET(Urls.CHECKONESBUY)
     Call<PayStateBean> getPayState(@Query("orderId") int orderId);
 }

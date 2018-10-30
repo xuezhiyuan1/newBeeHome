@@ -14,6 +14,7 @@ import retrofit2.http.Query;
  */
 
 public interface ShopListApi {
+
     @GET(Urls.SHOPLIST)
     Call<NewShopListBean> getDatas(@Query("machineId") int machineId);
 }

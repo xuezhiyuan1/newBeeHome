@@ -13,6 +13,7 @@ import android_serialport_api.SerialUtilOld;
  */
 
 public class GetDoorLocationState {
+
     public static SerialUtilOld serialUtilOld;
 
     public static String findDoorStateOrder(String port,int open,int close) throws InterruptedException {

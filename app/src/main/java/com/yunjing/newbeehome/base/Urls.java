@@ -6,6 +6,7 @@ package com.yunjing.newbeehome.base;
  */
 
 public class Urls {
+
     //测试服务器地址
     public static final String BASEURL = "http://192.168.1.111:8762/";
     //欢迎页地址

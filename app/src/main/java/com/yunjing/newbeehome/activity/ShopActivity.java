@@ -19,6 +19,7 @@ import com.yunjing.newbeehome.adapter.HomePagerAdapter;
 import com.yunjing.newbeehome.base.App;
 import com.yunjing.newbeehome.base.BaseActivity;
 import com.yunjing.newbeehome.base.BaseFragment;
+import com.yunjing.newbeehome.base.Keys;
 import com.yunjing.newbeehome.base.Urls;
 import com.yunjing.newbeehome.fragment.EmptyFragment;
 import com.yunjing.newbeehome.model.api.CheckShopCarListApi;
@@ -28,10 +29,12 @@ import com.yunjing.newbeehome.model.callback.ShopNumbers;
 import com.yunjing.newbeehome.model.entity.CheckShopCarBean;
 import com.yunjing.newbeehome.model.entity.NewShopListBean;
 import com.yunjing.newbeehome.model.util.FileSaveUtil;
+import com.yunjing.newbeehome.model.util.PropertiesUtils;
 import com.yunjing.newbeehome.model.util.ReadFileUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import q.rorbin.badgeview.QBadgeView;
 import retrofit2.Call;
@@ -50,6 +53,7 @@ import static com.yunjing.newbeehome.base.App.context;
 
 public class ShopActivity extends BaseActivity implements View.OnClickListener{
 
+    private Properties prop = PropertiesUtils.propertiesUtils().properties(Keys.FILE_URI_PATH + Keys.FILE_NAME);
     private TabLayout titleLayout;
     private List<NewShopListBean.DataBean.ProductPagesBean> titles;
     private ViewPager mViewPager;
@@ -58,6 +62,7 @@ public class ShopActivity extends BaseActivity implements View.OnClickListener{
     private ImageView imageView;
     //,imageshopcar
     private int tagTab = 1;
+    private String machineId;
 
     @Override
     protected void layoutId() {
@@ -99,6 +104,7 @@ public class ShopActivity extends BaseActivity implements View.OnClickListener{
         pagerAdapter = new HomePagerAdapter(getSupportFragmentManager(),fragments,titles);
         mViewPager.setAdapter(pagerAdapter);
         titleLayout.setupWithViewPager(mViewPager);
+        machineId = prop.getProperty("QUEUE_NAME");
     }
 
     @Override
@@ -112,7 +118,7 @@ public class ShopActivity extends BaseActivity implements View.OnClickListener{
         ReadFileUtil readFileUtil = new ReadFileUtil();
         String json = (String) readFileUtil.readObjFromSDCard("shoplist");
         if(TextUtils.isEmpty(json)){
-            NetGetRequest();
+            NetGetRequest(Integer.parseInt(machineId));
         }else {
             Gson gson = new Gson();
             NewShopListBean newShopListBean = gson.fromJson(json, NewShopListBean.class);
@@ -188,13 +194,13 @@ public class ShopActivity extends BaseActivity implements View.OnClickListener{
 
 
     //请求数据
-    private void NetGetRequest(){
+    private void NetGetRequest(int machineId){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Urls.BASEURL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         final ShopListApi shopListApi = retrofit.create(ShopListApi.class);
-        Call<NewShopListBean> call = shopListApi.getDatas(1);
+        Call<NewShopListBean> call = shopListApi.getDatas(machineId);
         call.enqueue(new Callback<NewShopListBean>() {
             @Override
             public void onResponse(Call<NewShopListBean> call, Response<NewShopListBean> response) {

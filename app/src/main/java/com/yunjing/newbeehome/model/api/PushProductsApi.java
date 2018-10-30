@@ -13,6 +13,7 @@ import retrofit2.http.Query;
  */
 
 public interface PushProductsApi {
+
     @GET(Urls.GETPUSHSHOPINFO)
     Call<PushShopInfoBean> getpushShopInfo(@Query("machineId") int machineId, @Query("orderId") int orderId);
 }

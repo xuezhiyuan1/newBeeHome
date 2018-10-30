@@ -51,6 +51,8 @@ public class EmptyFragment extends BaseFragment {
     private List<NewShopListBean.DataBean.ProductPagesBean.ProductsBean> list = new ArrayList<>();
     private Properties prop;
     private Bundle bundle;
+    private String machineId;
+
     @SuppressLint("ValidFragment")
     public EmptyFragment(List<NewShopListBean.DataBean.ProductPagesBean.ProductsBean> list){
         this.list = list;
@@ -93,10 +95,12 @@ public class EmptyFragment extends BaseFragment {
         prop = PropertiesUtils.propertiesUtils().properties(Keys.FILE_URI_PATH + Keys.FILE_NAME);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
+
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 try {
-                    String port = prop.getProperty("1");
+                    machineId = prop.getProperty("QUEUE_NAME");
+                    String port = prop.getProperty(machineId);
                     String machineRedLineOrder = FindShipRedLineState.findMachineRedLineOrder(port,12,14);
                     if(machineRedLineOrder.equals("00")){
                         //no have  //跳转详情
@@ -159,7 +163,7 @@ public class EmptyFragment extends BaseFragment {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         OneQcodeApi oneQcodeApi = retrofit.create(OneQcodeApi.class);
-        Call<QcodeBean> qcode = oneQcodeApi.getQcode(productId, 1);
+        Call<QcodeBean> qcode = oneQcodeApi.getQcode(productId, Integer.parseInt(machineId));
         qcode.enqueue(new Callback<QcodeBean>() {
             @Override
             public void onResponse(Call<QcodeBean> call, Response<QcodeBean> response) {

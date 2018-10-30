@@ -17,6 +17,7 @@ import android.widget.Toast;
  * 据库文件
  */
 public class MyHelper extends SQLiteOpenHelper {
+
     private static MyHelper helper;
     public static String CREATE_TABLE = "create table "+ DatabaseStatic.TABLE_NAME +"(" +
             DatabaseStatic.MACHINEID + " real, " +

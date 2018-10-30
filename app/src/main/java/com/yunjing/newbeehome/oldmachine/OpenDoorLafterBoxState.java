@@ -20,6 +20,7 @@ import android_serialport_api.SerialUtilOld;
  */
 
 public class OpenDoorLafterBoxState {
+
     public static SerialUtilOld serialUtilOld;
 
     public static String findMachineOrder(String port,int open,int close,int time) throws InterruptedException, IOException {

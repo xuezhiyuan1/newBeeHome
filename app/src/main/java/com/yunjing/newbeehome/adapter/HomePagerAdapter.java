@@ -12,6 +12,7 @@ import java.util.List;
 
 public class HomePagerAdapter extends FragmentPagerAdapter {
 
+
     private List<BaseFragment> fragments;
     private List<NewShopListBean.DataBean.ProductPagesBean> titles;
     public HomePagerAdapter(FragmentManager fm, List<BaseFragment> fragments, List<NewShopListBean.DataBean.ProductPagesBean> titles) {

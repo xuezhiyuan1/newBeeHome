@@ -9,6 +9,7 @@ import java.util.List;
 
 public class PushShopInfoBean {
 
+
     /**
      * meta : {"success":true,"message":"ok"}
      * data : [{"orderProductCellMachineMapId":7,"cellMachineProductTargetMapId":6,"deliverState":null,"productId":1,"productFullName":"商品全称1","cargoRoadName":"R6C1","machineId":1,"xAxis":10,"yAxis":100,"zAxis":900,"deliverySpeed":1000,"maxQuantity":20,"currentQuantity":20}]

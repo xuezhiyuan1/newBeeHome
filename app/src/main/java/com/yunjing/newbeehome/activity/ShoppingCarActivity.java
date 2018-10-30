@@ -24,6 +24,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ShoppingCarActivity extends BaseActivity implements View.OnClickListener{
 
 
+
     private LinearLayout linBack;
     private Button clearBtn;
     private ListView mList;

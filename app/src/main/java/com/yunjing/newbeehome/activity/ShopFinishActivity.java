@@ -11,12 +11,14 @@ import com.bumptech.glide.Glide;
 import com.yunjing.newbeehome.R;
 import com.yunjing.newbeehome.base.App;
 import com.yunjing.newbeehome.base.BaseActivity;
+import com.yunjing.newbeehome.base.Keys;
 import com.yunjing.newbeehome.base.Urls;
 import com.yunjing.newbeehome.model.api.PayStateApi;
 import com.yunjing.newbeehome.model.api.PushProductsApi;
 import com.yunjing.newbeehome.model.entity.PayStateBean;
 import com.yunjing.newbeehome.model.entity.PushShopInfoBean;
 import com.yunjing.newbeehome.model.util.DeleteFileUtil;
+import com.yunjing.newbeehome.model.util.PropertiesUtils;
 import com.yunjing.newbeehome.model.util.TtsUtil;
 import com.yunjing.newbeehome.oldmachine.CloseDoorOrder;
 import com.yunjing.newbeehome.oldmachine.OpenDoorLafterBoxState;
@@ -26,6 +28,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.locks.Lock;
@@ -57,6 +60,8 @@ public class ShopFinishActivity extends BaseActivity {
     private int xAxis;
     private Lock lock;
     private TextToSpeech tts;
+    private Properties prop;
+    private String machineId;
 
     @Override
     protected void layoutId() {
@@ -65,7 +70,8 @@ public class ShopFinishActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        prop = PropertiesUtils.propertiesUtils().properties(Keys.FILE_URI_PATH + Keys.FILE_NAME);
+        machineId = prop.getProperty("QUEUE_NAME");
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("finish");
         String shopName1 = bundle.getString("shopName1");
@@ -87,6 +93,7 @@ public class ShopFinishActivity extends BaseActivity {
         textViewLitterName.setText(shopName2);
         textViewOriginal.setText("市场价：￥"+priceOriginal);
         textViewCurrent.setText("已支付：￥"+priceCurrent);
+
     }
 
     @Override
@@ -142,7 +149,7 @@ public class ShopFinishActivity extends BaseActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         PushProductsApi pushProductsApi = retrofit.create(PushProductsApi.class);
-        Call<PushShopInfoBean> call = pushProductsApi.getpushShopInfo(1, orderId);
+        Call<PushShopInfoBean> call = pushProductsApi.getpushShopInfo(Integer.parseInt(machineId), orderId);
         call.enqueue(new Callback<PushShopInfoBean>() {
 
 
@@ -171,20 +178,21 @@ public class ShopFinishActivity extends BaseActivity {
                                                 null);
                                         try {
                                             //静止开门后查询设备状态的返回   30S
-                                            String machineBoxState = OpenDoorLafterBoxState.findMachineOrder("com3", 26, 28, 3000);
+                                            String port = prop.getProperty(machineId);
+                                            String machineBoxState = OpenDoorLafterBoxState.findMachineOrder(port, 26, 28, 3000);
                                             if (machineBoxState.equals("07")) {
                                                 //关门  查询门限位
-                                                CloseDoorOrder.findMachineOrder("com3", 12, 14, 100);
+                                                CloseDoorOrder.findMachineOrder(port, 12, 14, 100);
                                                 DeleteFileUtil.deletefile("shoplist.out");
                                                 in(MainActivity.class);
                                             } else if (machineBoxState.equals("06")) {
                                                 //取货超时
-                                                CloseDoorOrder.findMachineOrder("com3", 12, 14, 1000);
+                                                CloseDoorOrder.findMachineOrder(port, 12, 14, 1000);
                                                 DeleteFileUtil.deletefile("shoplist.out");
                                                 in(MainActivity.class);
                                             } else {
                                                 //静止  08  数据错位  复位
-                                                CloseDoorOrder.findMachineOrder("com3", 12, 14, 1000);
+                                                CloseDoorOrder.findMachineOrder(port, 12, 14, 1000);
                                                 textViewResult.setText("数据错位");
                                                 DeleteFileUtil.deletefile("shoplist.out");
                                                 in(ErrorActivity.class);

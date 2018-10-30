@@ -14,6 +14,7 @@ import retrofit2.http.Query;
  */
 
 public interface OneQcodeApi {
+
     @GET(Urls.PAYONEQCODE)
     Call<QcodeBean> getQcode(@Query("productId") int productId,@Query("machineId") int machineId);
 }

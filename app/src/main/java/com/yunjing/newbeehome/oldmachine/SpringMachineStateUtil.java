@@ -15,6 +15,7 @@ import android_serialport_api.SerialUtilOld;
 
 
 public class SpringMachineStateUtil {
+
     public static SerialUtilOld serialUtilOld;
     private static String state;
 

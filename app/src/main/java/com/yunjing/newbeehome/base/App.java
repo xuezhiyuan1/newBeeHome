@@ -8,7 +8,9 @@ import android.support.multidex.MultiDexApplication;
  */
 
 public class App extends MultiDexApplication {
+
     public static Activity context;
+
     @Override
     public void onCreate() {
         super.onCreate();

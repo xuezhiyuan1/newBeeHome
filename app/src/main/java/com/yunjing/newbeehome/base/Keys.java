@@ -17,18 +17,6 @@ public class Keys {
     public static final String PASSWORD = "admin@123";
     public static final String VIRTUALHOST = "/";
     public static final String CONFIG = "The New properties file";
-    public static final int TIME_QUEEN = 120000;
-    public static final int ONE = 1;
-    public static final int TWO = 2;
-    public static final int THREE = 3;
-    public static final int SIX = 6;
-    public static final int SENVEN = 7;
-    public static final int EIGHT = 8;
-    public static final int NINE = 9;
-    public static final int TEN = 10;
-    public static final int ELEVEN = 11;
-    public static final int TWELVE = 12;
-    public static final int THIRTEEN = 13;
 
     //配置文件路径
     public static final String FILE_URI_PATH = Environment.getExternalStorageDirectory()+"/Vendor/Android/Config";

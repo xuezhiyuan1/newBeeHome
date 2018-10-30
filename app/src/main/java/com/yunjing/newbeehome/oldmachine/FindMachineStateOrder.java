@@ -26,6 +26,7 @@ public class FindMachineStateOrder {
     private static String str_while;
 
     public static String findMachineOrder(String port,int open,int close) throws InterruptedException, IOException {
+
         BufferedWriter out;
         SimpleDateFormat formatter = new   SimpleDateFormat   ("yyyy年MM月dd日   HH:mm:ss");
         java.util.Date curDate = new java.util.Date(System.currentTimeMillis());

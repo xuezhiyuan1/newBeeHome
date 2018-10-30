@@ -6,6 +6,7 @@ package com.yunjing.newbeehome.model.db;
  */
 
 public class DatabaseStatic {
+
     //数据库名
     public final static String DATABASE_NAME = "shopInfo3.db";
     //数据库版本号

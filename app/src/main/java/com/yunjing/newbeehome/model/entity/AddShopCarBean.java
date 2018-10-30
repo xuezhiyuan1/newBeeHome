@@ -7,6 +7,7 @@ package com.yunjing.newbeehome.model.entity;
 
 public class AddShopCarBean {
 
+
     /**
      * meta : {"success":true,"message":"ok"}
      * data : null

@@ -159,6 +159,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                             Log.d("xuezhiyuan","无数据返回");
                         }
                     }
+
                     @Override
                     public void onFailure(Call<ShopListBean> call, Throwable t) {
                             Log.d("xuezhiyuan","网络请求失败");
